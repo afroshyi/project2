@@ -19,7 +19,7 @@ router.get('/',async(req,res,next)=>{
 try{
     const BookList= await Book.find();
     res.render('Book/list', {
-        title:'Books',
+        title:'Appointment',
         displayName: req.user?req.user.displayName:'',
         BookList:BookList
     })}
@@ -34,7 +34,7 @@ try{
 router.get('/add',async(req,res,next)=>{
     try{
         res.render('Book/add',{
-            title: 'Add Book',
+            title: 'Book Appointments',
             displayName: req.user?req.user.displayName:'' 
         })
 
@@ -79,7 +79,7 @@ router.get('/edit/:id',async(req,res,next)=>{
         const bookToEdit=await Book.findById(id);
         res.render('Book/edit',
             {
-                title:'Edit Book',
+                title:'Edit Appointmnets',
                 displayName: req.user?req.user.displayName:'',
                 Book:bookToEdit
             }
