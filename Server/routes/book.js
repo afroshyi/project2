@@ -4,7 +4,7 @@ let mongoose=require('mongoose');
 //Telling my router that i have this model
 let Book = require("../model/book")
 const book=require("../model/book")
-let bookController = require('../controllers/book.js')
+let bookController = require('../Controllers/book.js')
 function requireAuth(req,res,next)
 {
     if (!req.isAuthenticated())
